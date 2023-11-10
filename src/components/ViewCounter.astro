@@ -1,0 +1,26 @@
+---
+// Define a custom fetch function to make the API request
+const customFetch = async (url: any) => {
+	const response = await fetch(url)
+	const data = await response.json()
+	return data
+}
+
+export const load = async () => {
+	const response = await customFetch(
+		'https://1j48y3737l.execute-api.us-east-2.amazonaws.com/default'
+	)
+
+	const data = response || { views: 0 }
+	return { viewCounter: data.views }
+}
+---
+
+<div class="mx-auto flex max-w-xs flex-col gap-y-4">
+	<dt class="text-base leading-7 text-gray-600">Views</dt>
+	<dd
+		class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+	>
+		{Astro.props.viewCounter}
+	</dd>
+</div>
