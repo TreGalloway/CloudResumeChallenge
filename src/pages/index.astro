@@ -1,22 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+import ViewCounter from '../components/ViewCounter.astro'
 import { Icon } from 'astro-icon'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1 class="text-5xl font-medium">Tre Galloway</h1>
-		<h2 class="text-gray-600">Cloud React Engineer</h2>
+		<div class="flex flex-row">
+			<h1 class="basis-1/4 text-5xl font-medium">Tre Galloway</h1>
+			<h2 class="mt-5 basis-1/4 text-gray-600">Cloud React Engineer</h2>
+			<div class="mt-4 basis-1/4 text-gray-600">
+				<div class="flex">
+					<Icon pack="mdi" name="email" class="w-6" />
+					<Icon pack="mdi" name="web" class="w-6" />
+					<Icon pack="mdi" name="github" class="w-6" />
+					<Icon pack="mdi" name="linkedin" class="w-6" />
+				</div>
+			</div>
+			<div class="basis-1/4">
+				<ViewCounter />
+			</div>
+		</div>
 		<div class="border-t border-gray-300"></div>
 		<div>
 			<div>
-				<h3 class="text-lg font-semibold text-gray-600">Summary</h3>
+				<!-- <h3 class="text-lg font-semibold text-gray-600">Summary</h3> -->
 				<div class="text-gray-700">
-					I am a passionate and dedicated Full Stack Engineer specializing in AWS-based web application design,
-					development, and management. I have expertise in API setup, front-end and back-end components creation, and
-					effective utilization of CI/CD pipelines. With proficiency in agile methodologies, I ensure high-quality
-					software development through coding standards, code reviews, source control management, and operations.
+					I am a passionate and dedicated Full Stack Engineer specializing in
+					AWS-based web application design, development, and management. I have
+					expertise in API setup, front-end and back-end components creation,
+					and effective utilization of CI/CD pipelines.
 				</div>
 			</div>
 			<div>
@@ -25,19 +38,23 @@ import { Icon } from 'astro-icon'
 						<div class="w-full border-t border-gray-300"></div>
 					</div>
 					<div class="relative flex justify-start">
-						<span class="bg-slate-50 pr-3 text-xl font-semibold leading-6 text-gray-900">Skills</span>
+						<span
+							class="bg-slate-50 pr-3 text-xl font-semibold leading-6 text-gray-900"
+							>Skills</span
+						>
 					</div>
 				</div>
 				<ul>
 					<li>
-						<a class="font-medium">Languages & Frameworks:</a>Javascript, Typescript, Python, React, Nextjs, Astro,
-						Svelte
+						<a class="font-medium">Languages & Frameworks:</a>Javascript,
+						Typescript, Python, React, Nextjs, Astro, Svelte
 					</li>
 					<li>
 						<a class="font-medium">Databases:</a>Amazon RDS, DynamoDB
 					</li>
 					<li>
-						<a class="font-medium">Software & Tools:</a> Git, Github, VScode, Nodejs, Postgres, TailwindCSS, Docker, AWS
+						<a class="font-medium">Software & Tools:</a> Git, Github, VScode,
+						Nodejs, Postgres, TailwindCSS, Docker, AWS
 					</li>
 				</ul>
 			</div>
@@ -47,7 +64,10 @@ import { Icon } from 'astro-icon'
 						<div class="w-full border-t border-gray-300"></div>
 					</div>
 					<div class="relative flex justify-start">
-						<span class="bg-slate-50 pr-3 text-xl font-semibold leading-6 text-gray-900">Work Experience</span>
+						<span
+							class="bg-slate-50 pr-3 text-xl font-semibold leading-6 text-gray-900"
+							>Work Experience</span
+						>
 					</div>
 				</div>
 				<div>
@@ -56,8 +76,9 @@ import { Icon } from 'astro-icon'
 						<div>Tregalloway.com</div>
 						<ul>
 							<li>
-								• Created a personalized web platform consolidating online presence using AWS Cloud services, showcasing
-								strong abilities in web application development and API integration.
+								• Created a personalized web platform consolidating online
+								presence using AWS Cloud services, showcasing strong abilities
+								in web application development and API integration.
 							</li>
 						</ul>
 					</div>
@@ -71,8 +92,9 @@ import { Icon } from 'astro-icon'
 						<div>Raycast Extension- XXX</div>
 						<ul>
 							<li>
-								• Engineered a Raycast extension leveraging JavaScript demonstrating strength in front-end component
-								development and collaboration.
+								• Engineered a Raycast extension leveraging JavaScript
+								demonstrating strength in front-end component development and
+								collaboration.
 							</li>
 						</ul>
 					</div>
@@ -80,8 +102,10 @@ import { Icon } from 'astro-icon'
 						<div>Planni CLI</div>
 						<ul>
 							<li>
-								• Constructed a CLI with AWS integration for optimizing development projects, displaying proficiency in
-								back-end components design, database management, and CI/CD pipeline deployment.
+								• Constructed a CLI with AWS integration for optimizing
+								development projects, displaying proficiency in back-end
+								components design, database management, and CI/CD pipeline
+								deployment.
 							</li>
 						</ul>
 					</div>
@@ -91,15 +115,18 @@ import { Icon } from 'astro-icon'
 					<div>
 						<div>CoastalSoulRV</div>
 						<ul>
-							<li>• Crafted a lucrative landing page, leading to steady revenue growth. Pipepiperpestcontrol.</li>
+							<li>
+								• Crafted a lucrative landing page, leading to steady revenue
+								growth. Pipepiperpestcontrol.
+							</li>
 						</ul>
 					</div>
 					<div>
 						<div>Pipe Piperpest Control</div>
 						<ul>
 							<li>
-								• Designed a website to increase lead generation by 30%, showing business-oriented problem -solving
-								skills.
+								• Designed a website to increase lead generation by 30%, showing
+								business-oriented problem -solving skills.
 							</li>
 						</ul>
 					</div>
@@ -112,24 +139,27 @@ import { Icon } from 'astro-icon'
 						<div class="w-full border-t border-gray-300"></div>
 					</div>
 					<div class="relative flex justify-start">
-						<span class="bg-slate-50 pr-3 text-xl font-semibold leading-6 text-gray-900"
+						<span
+							class="bg-slate-50 pr-3 text-xl font-semibold leading-6 text-gray-900"
 							>Education & Certifications</span
 						>
 					</div>
 				</div>
 				<ul>
 					<li>
-						<a class="font-medium">Education:</a>Highschool, ZeroToMastery Academy Svelte
+						<a class="font-medium">Education:</a>Highschool, ZeroToMastery
+						Academy Svelte
 					</li>
 					<li>
 						<a class="font-medium">Certifications:</a>AWS Cloud Practitioner
 					</li>
 					<li>
-						<a class="font-medium">Pursuing the following:</a> Git, Github, VScode, Nodejs, Postgres, TailwindCSS,
-						Docker, AWS
+						<a class="font-medium">Pursuing the following:</a> Git, Github,
+						VScode, Nodejs, Postgres, TailwindCSS, Docker, AWS
 					</li>
 				</ul>
 			</div>
 		</div>
 	</main>
 </Layout>
+ ../components/ViewCounter.js ../components/ViewCounter.astro.js
