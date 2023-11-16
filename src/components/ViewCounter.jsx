@@ -5,13 +5,19 @@ function ViewCounter() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await fetch(
-				'https://1j48y3737l.execute-api.us-east-2.amazonaws.com/default'
-			)
-			const data = await response.json()
-			setViewCount(data.count)
+			try {
+				const response = await fetch(
+					'https://e3183kyb0j.execute-api.us-east-2.amazonaws.com/default/CloudResume'
+				)
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`)
+				}
+				const data = await response.json()
+				setViewCount(data.views)
+			} catch (error) {
+				console.log('Error:', error)
+			}
 		}
-
 		fetchData()
 	}, [])
 
